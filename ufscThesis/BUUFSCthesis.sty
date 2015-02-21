@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Universidade Federal de Santa Catarina             
-% Biblioteca Universit·ria                     
+% Biblioteca Universit√°ria                     
 %---------------------------------------------------------------------------
 % Definicao do arquivo de estilo BUUFSCThesis - Modelo de Tese da BU-UFSC
 %---------------------------------------------------------------------------
-% Vers„o 20100531 - Baseada na classe ABNTex vers„o 0.8-2
+% Vers√£o 20100531 - Baseada na classe ABNTex vers√£o 0.8-2
 %                                                           
 % (c)2010 Roberto Simoni (roberto.emc@gmail.com)
 %         Carlos R Rocha (cticarlo@gmail.com)
@@ -21,9 +21,9 @@
 % Pacotes essenciais para o estilo funcionar
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
 
-\usepackage[brazil]{babel}	% coloca as coisas em portugues no sum·rio.
+\usepackage[brazil]{babel}	% coloca as coisas em portugues no sum√°rio.
 \usepackage[ansinew]{inputenc}	% tipo de caracteres usados no documento
-\usepackage[normalem]{ulem}	% provÍ sublinhados para textos (\ul)
+\usepackage[normalem]{ulem}	% prov√™ sublinhados para textos (\ul)
 
 \usepackage{subfigure}		% permite ter subfiguras
 \usepackage{indentfirst}	% indenta a primeira linha dos paragrafos
@@ -31,7 +31,7 @@
 \usepackage{url}
 
 %---------------------------------------------------------------------------
-% Pacote de bibliografia no padr„o ABNT
+% Pacote de bibliografia no padr√£o ABNT
 \usepackage[alf,abnt-and-type=e,abnt-year-extra-label=yes,abnt-emphasize=bf,abnt-url-package=html]{abntcite} % 
 
 %originalmente era este
@@ -39,7 +39,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
-% Vari·veis identificadoras do trabalho
+% Vari√°veis identificadoras do trabalho
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
 % 
 %---------------------------------------------------------------------------
@@ -75,7 +75,7 @@
     {\renewcommand{\UFSCdocumentodata}{#2} \renewcommand{\UFSCdocumentogenerodata}{#1} \detgenerodoc{#2}}
 
 %---------------------------------------------------------------------------
-% Titulo e subtÌtulo
+% Titulo e subt√≠tulo
 \renewcommand{\tituloformat}[1]{\bfseries\MakeUppercase{#1}}
 
 \providecommand{\subtitulodata}{}
@@ -132,7 +132,7 @@
 
 %-!
 % Banca - Ate 7 membros, fora orientador e coorientador.
-% Se o nro de membros passar de 4, ser· criada uma folha adicional
+% Se o nro de membros passar de 4, ser√° criada uma folha adicional
 \newcommand{\bancaformat}{}
 
 \providecommand\orientadorbancadata{nao}
@@ -188,7 +188,7 @@
 %---------------------------------------------------------------------------
 % Texto da folha de rosto
 \newcommand{\UFSCcomentariodata}{\UFSCdocumentodata\ submetid\UFSCdocumentogenerodata\ 
- \aoa{\UFSCcursogenerodata}\ \UFSCcursodata\ para a obtenÁ„o do Grau de \graudata.}
+ \aoa{\UFSCcursogenerodata}\ \UFSCcursodata\ para a obten√ß√£o do Grau de \graudata.}
 
 \renewcommand{\comentarioformat}{\small}
 
@@ -231,21 +231,21 @@
 \newcommand{\epigrafeautorformat}{\hfill}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
-% Comandos e formatos customiz·veis 
+% Comandos e formatos customiz√°veis 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
 
 %---------------------------------------------------------------------------
-% FunÁıes de ajustes aos textos de acordo com o genero
+% Fun√ß√µes de ajustes aos textos de acordo com o genero
 \newcommand{\esteEsta}[1]{\ifthenelse{\equal{#1}{a}}{Esta}{Este}}
 \newcommand{\aoa}[1]{{\ifthenelse{\equal{#1}{a}}{\`a}{ao}}}
 \newcommand{\peloPela}[1]{\ifthenelse{\equal{#1}{o}}{pelo}{pela}}
 
 %---------------------------------------------------------------------------
-% Determina o genero do documento prÈ-definido
+% Determina o genero do documento pr√©-definido
 \newcommand{\detgenerodoc}[1] % Me dei por vencido - Verificar no futuro sobre expansao de commands
-    {\ifthenelse{\equal{#1}{RelatÛrio}\or\equal{#1}{Trabalho}\or
-                 \equal{#1}{Trabalho de Conclus„o de Curso}\or
-		 \equal{#1}{RelatÛrio de PÛs-Doutorado}}
+    {\ifthenelse{\equal{#1}{Relat√≥rio}\or\equal{#1}{Trabalho}\or
+                 \equal{#1}{Trabalho de Conclus√£o de Curso}\or
+		 \equal{#1}{Relat√≥rio de P√≥s-Doutorado}}
 	{\renewcommand{\UFSCdocumentogenerodata}{o}}
     }
 
@@ -253,8 +253,8 @@
 % Ficha catalografica
 \newcommand{\conteudofichacatalografica}{
 \begin{center}
-Ficha de identificaÁ„o da obra elaborada pelo autor
-atravÈs do \\Programa de GeraÁ„o Autom·tica da Biblioteca Universit·ria da UFSC.
+Ficha de identifica√ß√£o da obra elaborada pelo autor
+atrav√©s do \\Programa de Gera√ß√£o Autom√°tica da Biblioteca Universit√°ria da UFSC.
 \end{center}
 \frame{
     \begin{minipage}{\textwidth}
@@ -262,13 +262,13 @@ atravÈs do \\Programa de GeraÁ„o Autom·tica da Biblioteca Universit·ria da UFSC.
 	    {\small
 	    \vspace{5em}
 	    \parindent1.5cm
-	    A ficha de identificaÁ„o È elaborada pelo prÛprio autor\\
+	    A ficha de identifica√ß√£o √© elaborada pelo pr√≥prio autor\\
 	    
                                       
                       
 	    
 	      
-	    Maiores informaÁıes em:
+	    Maiores informa√ß√µes em:
 
 	    http://portalbu.ufsc.br/ficha
 	    \vspace{4em}}
@@ -279,7 +279,7 @@ atravÈs do \\Programa de GeraÁ„o Autom·tica da Biblioteca Universit·ria da UFSC.
 }
 
 %-------------------------------------------------------------------------------
-% Faz a impress„o de todos os elementos prÈ textuais menos o sum·rio
+% Faz a impress√£o de todos os elementos pr√© textuais menos o sum√°rio
 \newcommand{\pretextuais}{
 %\capa  
 \folhaderosto
@@ -292,8 +292,8 @@ atravÈs do \\Programa de GeraÁ„o Autom·tica da Biblioteca Universit·ria da UFSC.
 } %end of pretextuais
 
 %-------------------------------------------------------------------------------
-% Para listagens de algoritmos e de cÛdigo, recomenda-se consultar os
-% pacotes algorithms e lstlistings, que s„o usados para definir esses
+% Para listagens de algoritmos e de c√≥digo, recomenda-se consultar os
+% pacotes algorithms e lstlistings, que s√£o usados para definir esses
 % dois tipos de elementos de texto e possuem os comandos
 % \listofalgorithms e \lstlistoflistings, respectivamente.
 %-------------------------------------------------------------------------------
