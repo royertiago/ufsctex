@@ -17,6 +17,8 @@
 % 2. under the GNU Public License.                          
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
+\usepackage[utf8]{inputenc}	% tipo de caracteres usados no documento
+\usepackage[T1]{fontenc}	% codificação do documento produzido
 
 \NeedsTeXFormat{LaTeX2e}   % Identifica a versão de LaTeX em uso
 \ProvidesClass{ufscThesis} % Informa o tipo de documentclasse que ele é
