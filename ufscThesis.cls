@@ -1,21 +1,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Universidade Federal de Santa Catarina             
-% Biblioteca Universitária                     
+% Universidade Federal de Santa Catarina
+% Biblioteca Universitária
 %---------------------------------------------------------------------------
 % Definicao do arquivo de classe UFSCThesis - Modelo de Tese para a BU-UFSC
 %---------------------------------------------------------------------------
 % Versão 20100631 - Baseada na classe ABNTex versão 0.8-2
-%                                                           
+%
 % (c)2010 Roberto Simoni (roberto.emc@gmail.com)
 %         Carlos R Rocha (cticarlo@gmail.com)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
-% This file may be distributed and/or modified              
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This file may be distributed and/or modified
 %
-% 1. under the LaTeX Project Public License and/or          
-% 2. under the GNU Public License.                          
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[utf8]{inputenc}	% tipo de caracteres usados no documento
 \usepackage[T1]{fontenc}	% codificação do documento produzido
@@ -72,7 +72,7 @@
 
 \providecommand{\nometoc}{}
 
-% \@chapter : 
+% \@chapter :
 \def\@chapter[#1]#2%
       {\ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\theHchapter}{\chaptertype\thechapter}}{}
        \ifnum \c@secnumdepth >\m@ne
@@ -92,7 +92,7 @@
          \ifthenelse{\boolean{ABNTaftertoc}}%
            {\ABNTaddcontentsline{toc}{chapter}{\nometoc}}%
            {}%
-       \fi       
+       \fi
        \if@twocolumn
          \@topnewpage[\@makechapterhead{#2}]%
        \else
@@ -185,7 +185,7 @@
     \begingroup
       #6{%
         \@hangfrom{\hskip #3\relax \@svsec}%
-          \interlinepenalty \@M 
+          \interlinepenalty \@M
           \ifthenelse{\boolean{ABNTcapsec}\and\equal{#2}{1}}
              {\MakeUppercase{#8}}{#8}\@@par}%
     \endgroup
@@ -429,7 +429,7 @@
          \ifthenelse{\equal{#1}{}}
             {\def\thechapter{\anapchaptername{} \Alph{chapter}}}
             {\def\thechapter{\anapchaptername{} \Alph{chapter}{}
-                                \ABNTtravessao{} #1}} 
+                                \ABNTtravessao{} #1}}
          \ABNTchaptermark{}
          \endgroup
          \if@twocolumn
@@ -460,7 +460,7 @@
          {
           \ABNTaddcontentsline{toc}{chapter}%
                    {\hspace{\espacosumario}\protect\numberline{\thechapter}#1}
-         }  
+         }
        \else
          \ABNTaddcontentsline{toc}{chapter}{\hspace{\espacosumario}#1}
        \fi
@@ -469,7 +469,7 @@
 
 
 \def\@makeanapchapterhead#1{%
-  \thispagestyle{empty} 	% Define o estilo desta página como vazio   
+  \thispagestyle{empty} 	% Define o estilo desta página como vazio
   \normalfont\ABNTchapterfont
   \espaco{simples}
   \mbox{}
@@ -481,7 +481,7 @@
   \vfill
   \vfill
   \newpage
-  \thispagestyle{empty} 	% Define o estilo desta página como vazio   
+  \thispagestyle{empty} 	% Define o estilo desta página como vazio
   \if@openright\cleardoublepage\else\clearpage\fi%
     \if@twocolumn
 	\@restonecoltrue\onecolumn
@@ -524,7 +524,7 @@
     \begingroup
       #6{%
         \@hangfrom{\hskip #3\relax \@svsec}%
-          \interlinepenalty \@M 
+          \interlinepenalty \@M
           \ifthenelse{\boolean{ABNTcapsec}\and\equal{#2}{1}}
              {\MakeUppercase{#8}}{#8}\@@par}%
     \endgroup
@@ -614,8 +614,8 @@
 %         \thesection\ \ %
 %       \fi%
 %       ##1}%
-  }%   
-}% 
+  }%
+}%
 
 %---------------------------------------------------------------------------
 % Estilo do texto da folha de rosto
@@ -829,7 +829,7 @@
 \end{espacosimples}
 
 
- {\setlength{\parindent}{0cm} \bfseries Banca Examinadora:\par}  
+ {\setlength{\parindent}{0cm} \bfseries Banca Examinadora:\par}
 
 \ABNTifnotempty{\ABNTorientadordata}
     {
@@ -844,8 +844,8 @@
 	\end{espacosimples}
 	}{}
     }
-      
-    
+
+
 \ABNTifnotempty{\ABNTcoorientadordata}
     {
     \ifthenelse{\equal{\coorientadorbancadata}{nao}}
@@ -890,7 +890,7 @@
 	\end{espacosimples}
 	}{}
     }
-    
+
 \ifnum \nrobanca < 4
     {
  \ABNTifnotempty{\bancanameA}
@@ -902,8 +902,8 @@
 	 \bancaformat \bancanameA \\ \bancadataA\par}
 	\end{center}
     \end{espacosimples}
-    }   
-    
+    }
+
 \ABNTifnotempty{\bancanameB}
     {
     \begin{espacosimples}
@@ -914,7 +914,7 @@
 	\end{center}
     \end{espacosimples}
     }
-    
+
  \ABNTifnotempty{\bancanameC}
     {
     \begin{espacosimples}
@@ -924,7 +924,7 @@
 	 \bancaformat \bancanameC \\ \bancadataC\par}
 	\end{center}
     \end{espacosimples}
-    }   
+    }
     }
 \vfill
 % Cria uma nova página de assinaturas
@@ -932,7 +932,7 @@
 \else
     {
     \newpage
-   
+
     \ABNTifnotempty{\bancanameA}
     {
     \begin{espacosimples}
@@ -942,8 +942,8 @@
 	 \bancaformat \bancanameA \\ \bancadataA\par}
 	\end{center}
     \end{espacosimples}
-    }   
-    
+    }
+
     \ABNTifnotempty{\bancanameB}
     {
     \begin{espacosimples}
@@ -954,7 +954,7 @@
 	\end{center}
     \end{espacosimples}
     }
-    
+
     \ABNTifnotempty{\bancanameC}
 	{
 	\begin{espacosimples}
@@ -1055,7 +1055,7 @@
 \fi
 \thispagestyle{empty} 	% Define o estilo desta página como vazio
 \ABNTifnotempty{\agradecimentodata}%
-    {   
+    {
     \begin{center}
 	\tituloformat{\agradecimentoname}
     \end{center}
@@ -1097,7 +1097,7 @@
 % 	}
     }
      \vspace{1cm}
-   
+
 %\vfill\vfill
 \mbox{}
 }% end of \epigrafe
@@ -1116,7 +1116,7 @@
   {\end{espacosimples}
    \vspace{.2cm}
 
-  
+
    \ABNTifnotempty{\palavrasChavedata}
 	{\par\setlength{\parindent}{0cm}{\bfseries Palavras-chave:} \palavrasChavedata}
    \newpage}%resumo
@@ -1146,7 +1146,7 @@
   }%
   {\end{espacosimples}
  \vspace{.2cm}
-  
+
    \ABNTifnotempty{\keywordsdata}
 	{\par\setlength{\parindent}{0cm}{\bfseries Keywords:} \keywordsdata}
    \newpage}%abstract

@@ -1,25 +1,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Universidade Federal de Santa Catarina             
-% Biblioteca Universitária                     
+% Universidade Federal de Santa Catarina
+% Biblioteca Universitária
 %---------------------------------------------------------------------------
 % Definicao do arquivo de estilo BUUFSCThesis - Modelo de Tese da BU-UFSC
 %---------------------------------------------------------------------------
 % Versão 20100531 - Baseada na classe ABNTex versão 0.8-2
-%                                                           
+%
 % (c)2010 Roberto Simoni (roberto.emc@gmail.com)
 %         Carlos R Rocha (cticarlo@gmail.com)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
-% This file may be distributed and/or modified              
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This file may be distributed and/or modified
 %
-% 1. under the LaTeX Project Public License and/or          
-% 2. under the GNU Public License.                          
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pacotes essenciais para o estilo funcionar
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[brazil]{babel}	% coloca as coisas em portugues no sumário.
 \usepackage[normalem]{ulem}	% provê sublinhados para textos (\ul)
@@ -31,16 +31,16 @@
 
 %---------------------------------------------------------------------------
 % Pacote de bibliografia no padrão ABNT
-\usepackage[alf,abnt-and-type=e,abnt-year-extra-label=yes,abnt-emphasize=bf,abnt-url-package=html]{abntcite} % 
+\usepackage[alf,abnt-and-type=e,abnt-year-extra-label=yes,abnt-emphasize=bf,abnt-url-package=html]{abntcite} %
 
 %originalmente era este
-%\usepackage[alf,abnt-and-type=e, abnt-etal-cite=1, abnt-etal-list=0, abnt-year-extra-label=yes,abnt-url-package=url]{abntcite} % 
+%\usepackage[alf,abnt-and-type=e, abnt-etal-cite=1, abnt-etal-list=0, abnt-year-extra-label=yes,abnt-url-package=url]{abntcite} %
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Variáveis identificadoras do trabalho
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
-% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %---------------------------------------------------------------------------
 % Instituicao
 \renewcommand{\ABNTinstituicaodata}{Universidade Federal de Santa Catarina}
@@ -186,17 +186,17 @@
 
 %---------------------------------------------------------------------------
 % Texto da folha de rosto
-\newcommand{\UFSCcomentariodata}{\UFSCdocumentodata\ submetid\UFSCdocumentogenerodata\ 
+\newcommand{\UFSCcomentariodata}{\UFSCdocumentodata\ submetid\UFSCdocumentogenerodata\
  \aoa{\UFSCcursogenerodata}\ \UFSCcursodata\ para a obtenção do Grau de \graudata.}
 
 \renewcommand{\comentarioformat}{\small}
 
 %---------------------------------------------------------------------------
 % Texto da folha de aprovacao
-\newcommand{\textoAprovacaodata}{\esteEsta{\UFSCdocumentogenerodata} \UFSCdocumentodata\ 
-    foi julgad\UFSCdocumentogenerodata\ aprovad\UFSCdocumentogenerodata\ para a 
-    obten\c{c}\~ao do T\'itulo de ``\graudata'',  e aprovad\UFSCdocumentogenerodata\ 
-    em sua forma final \peloPela{\UFSCcursogenerodata} \UFSCcursodata.} 
+\newcommand{\textoAprovacaodata}{\esteEsta{\UFSCdocumentogenerodata} \UFSCdocumentodata\
+    foi julgad\UFSCdocumentogenerodata\ aprovad\UFSCdocumentogenerodata\ para a
+    obten\c{c}\~ao do T\'itulo de ``\graudata'',  e aprovad\UFSCdocumentogenerodata\
+    em sua forma final \peloPela{\UFSCcursogenerodata} \UFSCcursodata.}
 
 % Resumo e abstract
 \providecommand{\textoResumodata}{}
@@ -229,9 +229,9 @@
 \newcommand{\epigrafeformat}{}%{\itshape}
 \newcommand{\epigrafeautorformat}{\hfill}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
-% Comandos e formatos customizáveis 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                         
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comandos e formatos customizáveis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %---------------------------------------------------------------------------
 % Funções de ajustes aos textos de acordo com o genero
@@ -262,11 +262,11 @@ através do \\Programa de Geração Automática da Biblioteca Universitária da 
 	    \vspace{5em}
 	    \parindent1.5cm
 	    A ficha de identificação é elaborada pelo próprio autor\\
-	    
-                                      
-                      
-	    
-	      
+	
+
+
+	
+	
 	    Maiores informações em:
 
 	    http://portalbu.ufsc.br/ficha
@@ -280,7 +280,7 @@ através do \\Programa de Geração Automática da Biblioteca Universitária da 
 %-------------------------------------------------------------------------------
 % Faz a impressão de todos os elementos pré textuais menos o sumário
 \newcommand{\pretextuais}{
-%\capa  
+%\capa
 \folhaderosto
 \folhaaprovacao
 \paginadedicatoria
