@@ -21,7 +21,7 @@
 \usepackage[T1]{fontenc}	% codificação do documento produzido
 
 \NeedsTeXFormat{LaTeX2e}   % Identifica a versão de LaTeX em uso
-\ProvidesClass{ufscThesis} % Informa o tipo de documentclasse que ele é
+\ProvidesClass{ufsctex}    % Informa o tipo de documentclasse que ele é
 %---------------------------------------------------------------------------
 % Passa as opções não interessantes para a classe base ABNTex
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abnt}}
@@ -42,7 +42,7 @@
 
 %---------------------------------------------------------------------------
 % Pacote de definicoes da tese padrao UFSC
-\RequirePackage{ufscThesis/BUUFSCthesis}
+\RequirePackage{ufsctex/ufsctex}
 
 %---------------------------------------------------------------------------
 % Definicoes de fontes usadas no documento
