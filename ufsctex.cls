@@ -1007,7 +1007,7 @@
 	}
     \vfill
     }
-%\fi
+\fi
 %\if@restonecol\twocolumn \else \newpage \fi
 }% end of \aprovacao
 
