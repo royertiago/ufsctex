@@ -340,7 +340,41 @@
 
 \newcommand{\listadesimbolos}{
     \pretextualchapter{Lista de S\'imbolos}\@starttoc{lsb}}
-\newcommand{\simbolo}[2]{\addcontentsline{lsb}{simb}{\numberline{#1}{#2}}}
+
+% \ufsctex@symbolbox{symbol}
+% Cria uma caixa (via \makebox) do tamanho do símbolo,
+% caso este tamanho seja maior que 2em;
+% caso contrário, a caixa terá largura 2em.
+%
+% Este comando foi criado para lidar com o problema de alguns símbolos
+% serem largos demais e acabarem sobrescrevendo o texto que descreve o símbolo.
+\newlength\ufsctex@symbolwidth
+\DeclareRobustCommand\ufsctex@symbolbox[1]{%
+    \settowidth\ufsctex@symbolwidth{#1}%
+    \ifthenelse{\lengthtest{\ufsctex@symbolwidth < 2em}}{%
+        \setlength\ufsctex@symbolwidth{2em}%
+    }{%else
+        % nop
+    }%
+    \makebox[\ufsctex@symbolwidth][l]{#1}%
+}
+
+% Insere um símbolo na lista de símbolos.
+% Em relação ao comando original,
+% esta versão "empurra" o texto do símbolo para a direita
+% caso o símbolo seja largo demais.
+%
+% (Esta é a solução que eu encontrei para que símbolos largos demais
+% não sobrescrevessem o texto que os descreve;
+% não sei se esta está de acordo com as normas da ABNT ou da UFSC.
+\newcommand{\simbolo}[2]{%
+    \addcontentsline{lsb}{simb}{%
+        % Podemos usar \ufsctex@symbolbox diretamente,
+        % pois este comando é robusto.
+        \ufsctex@symbolbox{#1}\quad{#2}%
+    }%
+}
+
 \newcommand{\l@simb}[2]{
        \vskip -1em
        \leftskip -1.5em
