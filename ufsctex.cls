@@ -81,7 +81,7 @@
          \typeout{\@chapapp\space\thechapter.}%
          % gambiarra usada para definir maiusculas para capitulos comuns e normal para anexos e apêndices
          \ifthenelse{\boolean{ABNTcapchap}}
-               {\renewcommand{\nometoc}{\MakeUppercase{#1}}}
+               {\renewcommand{\nometoc}{\uppercase{#1}}}
                {\renewcommand{\nometoc}{#1}}
          \ifthenelse{\boolean{ABNTaftertoc}}
            {\ABNTaddcontentsline{toc}{chapter}%
@@ -288,7 +288,7 @@
     \@dottedtocline{1}{0pt}{\espacosumario}%{2em}
 	{\normalsize\ABNTsectionfont
 	 \ifthenelse{\boolean{ABNTcapchap}}%
-	    {\MakeUppercase{#1}}%
+	    {\uppercase{#1}}%
 	    {#1}}
 	{#2}}
 
@@ -487,9 +487,9 @@
          \ifthenelse{\boolean{ABNTAnApName}}{
            \ifthenelse{\equal{#1}{}}
               {\ABNTaddcontentsline{toc}{chapter}%
-                  {\hspace{\espacosumario}\MakeUppercase{\anapchaptername{}} \thechapter}}
+                  {\hspace{\espacosumario}\uppercase{\anapchaptername{}} \thechapter}}
               {\ABNTaddcontentsline{toc}{chapter}%
-                  {\hspace{\espacosumario}\MakeUppercase{\anapchaptername{}} \thechapter{} \ABNTtravessao{} #1}}
+                  {\hspace{\espacosumario}\uppercase{\anapchaptername{}} \thechapter{} \ABNTtravessao{} #1}}
          }
          {
           \ABNTaddcontentsline{toc}{chapter}%
