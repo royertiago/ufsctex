@@ -61,6 +61,17 @@
 % Executa o comando #2 se o argumento #1 não estiver vazio, senão executa #3
 \newcommand{\UFSCifnotempty}[3]{\ifthenelse{\not\equal{#1}{}}{#2}{#3}}
 
+% Wrapper para texorpdfstring.
+% A primeira opção (comandos TeX) torna o texto em maiúsculas usando \MakeUppercase.
+% A segunda opção (pdfstring) usa \uppercase.
+%
+% (Aparentemente, hyperref não gosta muito do comando \MakeUppercase
+% em alguns pontos; a ideia é que, nestes pontos,
+% \uppercase seja usado como "plano de contingência".)
+\newcommand\ufsctex@uppercase[1]{%
+    \texorpdfstring{\MakeUppercase{#1}}{\uppercase{#1}}%
+}
+
 %---------------------------------------------------------------------------
 % Formatação de capitulos
 \renewcommand{\ABNTchaptersize}{\normalsize} % Fonte de capítulo
@@ -81,7 +92,7 @@
          \typeout{\@chapapp\space\thechapter.}%
          % gambiarra usada para definir maiusculas para capitulos comuns e normal para anexos e apêndices
          \ifthenelse{\boolean{ABNTcapchap}}
-               {\renewcommand{\nometoc}{\uppercase{#1}}}
+               {\renewcommand{\nometoc}{\ufsctex@uppercase{#1}}}
                {\renewcommand{\nometoc}{#1}}
          \ifthenelse{\boolean{ABNTaftertoc}}
            {\ABNTaddcontentsline{toc}{chapter}%
@@ -487,9 +498,9 @@
          \ifthenelse{\boolean{ABNTAnApName}}{
            \ifthenelse{\equal{#1}{}}
               {\ABNTaddcontentsline{toc}{chapter}%
-                  {\hspace{\espacosumario}\uppercase{\anapchaptername{}} \thechapter}}
+                  {\hspace{\espacosumario}\ufsctex@uppercase{\anapchaptername{}} \thechapter}}
               {\ABNTaddcontentsline{toc}{chapter}%
-                  {\hspace{\espacosumario}\uppercase{\anapchaptername{}} \thechapter{} \ABNTtravessao{} #1}}
+                  {\hspace{\espacosumario}\ufsctex@uppercase{\anapchaptername{}} \thechapter{} \ABNTtravessao{} #1}}
          }
          {
           \ABNTaddcontentsline{toc}{chapter}%
